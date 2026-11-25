@@ -1,0 +1,30 @@
+{
+  "name": "tm4Psp",
+  "title": "Tokimeki Memorial 4 (PSP) Parser",
+  "description": "Import Tokimeki Memorial 4 PSP dialogue, menus, CSV text and editable interface textures from a Japanese ISO. Export a separate patched ISO.",
+  "main": "tm4Psp.js",
+  "homepage": "https://github.com/pismax",
+  "version": "1.2.5",
+  "icon": "icon.png",
+  "author": {
+    "name": "pismax"
+  },
+  "autoload": false,
+  "load": [
+    "tm4Psp.js"
+  ],
+  "minimumVersion": "8.11.9",
+  "compile": {
+    "modules": [
+      "tm4Psp.module.js",
+      "tm4Psp.guidance.js"
+    ]
+  },
+  "exclude": [
+    "src/**",
+    "test/**",
+    "plan/**",
+    "AGENTS.md",
+    "README.md"
+  ]
+}

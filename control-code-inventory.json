@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-03",
+  "basis": "Read-only extracted original ASB strings, TSID type-9 fields and CSV text; byte-identical files deduplicated",
+  "uniqueFiles": 858,
+  "stringsExamined": 105818,
+  "families": {
+    "n": {
+      "count": 2642,
+      "observedVariants": {
+        "\\n": 2636,
+        "\\nPlayStation": 1,
+        "\\nPSP": 3,
+        "\\nOFF": 1,
+        "\\nON": 1
+      }
+    },
+    "h": {
+      "count": 3527,
+      "observedVariants": {
+        "\\h10": 120,
+        "\\h13": 47,
+        "\\h12": 49,
+        "\\h23": 83,
+        "\\h00": 276,
+        "\\h24": 8,
+        "\\h25": 3,
+        "\\h01": 353,
+        "\\h26": 206,
+        "\\h02": 227,
+        "\\h03": 277,
+        "\\h08": 344,
+        "\\h04": 306,
+        "\\h05": 319,
+        "\\h06": 254,
+        "\\h07": 350,
+        "\\h09": 305
+      }
+    },
+    "i": {
+      "count": 40,
+      "observedVariants": {
+        "\\i26": 39,
+        "\\i08": 1
+      }
+    },
+    "p": {
+      "count": 37,
+      "observedVariants": {
+        "\\p01": 33,
+        "\\p02": 4
+      }
+    },
+    "c": {
+      "count": 3,
+      "observedVariants": {
+        "\\c": 3
+      }
+    },
+    "x": {
+      "count": 1,
+      "observedVariants": {
+        "\\x": 1
+      }
+    },
+    "s": {
+      "count": 42,
+      "observedVariants": {
+        "\\s": 42
+      }
+    },
+    "r": {
+      "count": 22,
+      "observedVariants": {
+        "\\r": 22
+      }
+    },
+    "k": {
+      "count": 12,
+      "observedVariants": {
+        "\\k26": 12
+      }
+    },
+    "j": {
+      "count": 6,
+      "observedVariants": {
+        "\\j26": 6
+      }
+    },
+    "m": {
+      "count": 3,
+      "observedVariants": {
+        "\\m01": 2,
+        "\\m03": 1
+      }
+    },
+    "z": {
+      "count": 2,
+      "observedVariants": {
+        "\\z": 2
+      }
+    }
+  },
+  "printf": {
+    "%s": 59
+  },
+  "note": "The n variants include following ASCII words; they all represent the argument-free literal newline prefix."
+}
