@@ -23,7 +23,7 @@ Fixed budgets count encoded stored tokens before game-side expansion.
    multiline/control-code preservation, malformed input, and missing translations.
 6. Run `node --test www/addons/tm4Psp/test/tm4Psp.module.test.js`
    and `node --test www/addons/tm4Psp/test/tm4Psp.integration.test.js`
-   from the repository root. Also exercise New Project, reopen, folder/zip export,
+   from the Translator++ root. Also exercise New Project, reopen, folder/zip export,
    inject, and update in Translator++. Verify module loading after compilation.
 
 Do not modify original game resources during extraction or export. Preserve
@@ -52,6 +52,29 @@ must keep their individual positions and styles through save/reopen.
 For font changes and live emulator tests, read
 [plan/half-width-and-ppsspp.md](plan/half-width-and-ppsspp.md). Reusable setup,
 navigation and debugger probes are in `tools/test-tm4-font.ps1` and
-`tools/tm4-ppsspp.py` at the repository root; do not depend on ignored lab files.
+`tools/tm4-ppsspp.py` at the Translator++ root; do not depend on ignored lab files.
 Use an isolated emulator copy and a fresh ISO boot for final verification.
 Run `python -B tools/test_tm4_ppsspp.py` after changing the automation helper.
+
+## Repository and releases
+
+This folder is its own git repository,
+[pismax/tpp-tm4Psp](https://github.com/pismax/tpp-tm4Psp), cloned at
+`<Translator++>/www/addons/tm4Psp` so the app loads it and the tests can require
+`www/js/...`. Commit here as `pismax <360907843+pismax@users.noreply.github.com>`
+(set in this clone's git config). Never commit these files to the Translator++
+repository, and never add other identities, emails or local paths.
+
+To release:
+
+1. Bump `version` in `package.json` (and the top-level and root-package
+   versions in `package-lock.json` when present). Raise `minimumVersion` when
+   the code needs a newer Translator++.
+2. Describe the user-facing change under a new version heading in
+   `CHANGELOG.md`.
+3. Run the tests above, commit, then `git tag v<version>` and
+   `git push origin main v<version>`. Never move a published tag.
+4. In the catalog repository [pismax/tpp-addons](https://github.com/pismax/tpp-addons),
+   set this add-on's `ref` to the new tag, update its README table, run
+   `node scripts/validate-catalog.js`, and push. Translator++ offers the update
+   within a few minutes.
