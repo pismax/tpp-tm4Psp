@@ -1,9 +1,9 @@
 # Working on tm4Psp
 
 The parser is implemented. Use the
-[TM4 case map](../../docs/console-rom-parser/cases/tm4-psp.md) to select relevant
+[case map](plan/case-map.md) to select relevant
 README/plan sections before changing formats or integration. Preserve the
-validated extraction/export behaviour; do not load unrelated case notes.
+validated extraction/export behaviour.
 
 Read the relevant CONTROL_CODES.md sections before changing control-code handling. Name/context
 selectors use decimal digits and several codes have path-dependent meanings.
@@ -52,7 +52,8 @@ must keep their individual positions and styles through save/reopen.
 For font changes and live emulator tests, read
 [plan/half-width-and-ppsspp.md](plan/half-width-and-ppsspp.md). Reusable setup,
 navigation and debugger probes are in `tools/test-tm4-font.ps1` and
-`tools/tm4-ppsspp.py` at the Translator++ root; do not depend on ignored lab files.
+`tools/tm4-ppsspp.py` in this repository; run them from this folder. Lab output
+goes to the ignored `artifacts/` folder; do not depend on it.
 Use an isolated emulator copy and a fresh ISO boot for final verification.
 Run `python -B tools/test_tm4_ppsspp.py` after changing the automation helper.
 

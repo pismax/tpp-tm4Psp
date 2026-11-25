@@ -216,7 +216,7 @@ The existing Latin shapes become thin when the 16-pixel atlas cell is drawn at
 8 pixels wide. The optional `halfWidthFont.weight: "bold"` setting treats this
 separately from the verified executable/spacing patch; missing settings mean
 `"regular"` for old projects. Configure it in the half-width alphabet dialog.
-No new application-owned code is needed for this add-on update.
+This update does not need a newer Translator++.
 
 `tm4_font.bold_atlas` checks the original executable and the 445,440-byte atlas
 SHA-256 `fbae09c4c7626d4baaa0009df9fa9e1eb9b83f8a562112a6764edd5fa1311124`.
@@ -278,11 +278,11 @@ These findings supported tracing but no atlas edit was needed for the solution.
 
 Reusable tools live in the repository, rather than the ignored experiment folder:
 
-- [`tools/test-tm4-font.ps1`](../../../../tools/test-tm4-font.ps1): prepare/launch
+- [`tools/test-tm4-font.ps1`](../tools/test-tm4-font.ps1): prepare/launch
   an isolated PPSSPP copy, optionally navigate and verify, and save evidence.
-- [`tools/tm4-ppsspp.py`](../../../../tools/tm4-ppsspp.py): local WebSocket client,
+- [`tools/tm4-ppsspp.py`](../tools/tm4-ppsspp.py): local WebSocket client,
   navigation, runtime verification, button presses, memory reads and disassembly.
-- [`tools/test_tm4_ppsspp.py`](../../../../tools/test_tm4_ppsspp.py): synthetic
+- [`tools/test_tm4_ppsspp.py`](../tools/test_tm4_ppsspp.py): synthetic
   tests for setup isolation, RPC handling, navigation and probe cleanup.
 
 Requirements: Windows PowerShell with `Get-NetTCPConnection`, Python 3.10+,
@@ -294,7 +294,7 @@ standard library; remote commands need:
 python -m pip install websockets==10.3
 ```
 
-From the Translator++ repository root, substitute your own paths:
+From this add-on's folder, substitute your own paths:
 
 ```powershell
 $iso = 'D:\Games\TM4.translated.iso'

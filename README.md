@@ -128,7 +128,7 @@ SHA-256 identity and supported-format checks remain active. The export report
 records CRC verification or bypass. The inspected source's CRC32 is `8C6E35CD`;
 other inputs must use their own recorded checksum.
 
-Parser authors and agents: [reusable guidance/limits/CRC API](../../docs/parser-translation-guidance.md).
+Parser authors and agents: Translator++ documents the guidance, limits and CRC API in `www/docs/parser-translation-guidance.md`.
 External agents can read limits with the registered `translation.constraints.read`
 tool without loading all game documentation.
 

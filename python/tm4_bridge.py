@@ -1,6 +1,6 @@
 """Portable, read-only import and validated copy-on-export for TM4 PSP.
 
-Container codecs are adapted from the user's tm4_translation research tools.
+Container codecs are adapted from my earlier tm4_translation research tools.
 No model, translator, or external research workspace is needed at runtime.
 """
 import sys, os, json, struct, hashlib, base64, re, pathlib, tempfile, shutil, csv, io, collections, zlib
