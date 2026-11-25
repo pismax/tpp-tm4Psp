@@ -396,7 +396,7 @@ thisAddon.showTranslationSettingsDialog = function() {
 
 thisAddon.registerProjectWizard = function() {
     const $slide = $("<div><h2>Tokimeki Memorial 4 (PSP)</h2><p>Import dialogue, message tables, CSV text and editable interface images from the Japanese PSP ISO. Export and Inject create a separate patched ISO.</p><p>Message-box dialogue may reflow within its line and width limits. Preserve other control codes. Most dialogue can grow; rows with a fixed byte budget must fit. GIM images retain their dimensions and original palette. Python 3.10+ is required; image import also uses Pillow.</p><div class='parserFields'></div></div>");
-    ui.newProjectDialog.addMenu({icon: thisAddon.getWebLocation() + "/icon.png", descriptionBar: "<h2>Tokimeki Memorial 4 (PSP)</h2>",
+    ui.newProjectDialog.addMenu({icon: thisAddon.getWebLocation() + "/" + thisAddon.package.icon, descriptionBar: "<h2>Tokimeki Memorial 4 (PSP)</h2>",
         actionBar: "", goToSlide: thisAddon.package.name, at: 8, slides: {parser: ui.newProjectDialog.newSlide(thisAddon.package.name, $slide, {
             buttons: [{text: t("Create Project"), click: async function() {
                 try { await thisAddon.prepareNewProject(thisAddon.projectField?.getValues()); ui.newProjectDialog.close(); }

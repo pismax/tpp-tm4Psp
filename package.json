@@ -4,8 +4,8 @@
   "description": "Import Tokimeki Memorial 4 PSP dialogue, menus, CSV text and editable interface textures from a Japanese ISO. Export a separate patched ISO.",
   "main": "tm4Psp.js",
   "homepage": "https://github.com/pismax",
-  "version": "1.2.5",
-  "icon": "icon.png",
+  "version": "1.2.6",
+  "icon": "icon-chibi.png",
   "author": {
     "name": "pismax"
   },
@@ -24,6 +24,7 @@
     "src/**",
     "test/**",
     "plan/**",
+    "showcase/**",
     "AGENTS.md",
     "README.md"
   ]
